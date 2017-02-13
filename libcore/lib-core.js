@@ -7,22 +7,20 @@
  // ctor
  function libcore(){
  	// members variables
+  this.id = 0;
  }
-
- // init object
- libcore.prototype.init = function() {
-  log("init");
-  return this;
- };
-
- // destroy object
- libcore.prototype.done = function() {
-  log("done");
-  return this;
- };
-
+ 
+ libcore.prototype = {
+   init : function(){
+    log("init");
+    return this;
+   },
+  done : function(){
+    log("done");
+    return this;
+   }
+ }
  module.exports = new libcore();
-
 }());
 
  
